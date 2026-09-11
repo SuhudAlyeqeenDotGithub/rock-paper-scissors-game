@@ -19,11 +19,12 @@ const determineGameWinner = () => {
 const getScoreReport = () => {
   const computerScore = gameObject.score.computer;
   const playerScore = gameObject.score.player;
-  return `Score Board: You: ${playerScore} - Computer: ${computerScore}`;
+  return `Score Board 🎰: You 🙍‍♂️: ${playerScore} <|> Computer 🤖: ${computerScore}`;
 };
 
 const endGame = () => {
-  alert(`Game ended: No winner\n ${getScoreReport()}`);
+  alert(`Game ended 🚫: No winner
+    \n${getScoreReport()}`);
   resetGameObject();
   throw new Error("Game Ended No Winner");
 };

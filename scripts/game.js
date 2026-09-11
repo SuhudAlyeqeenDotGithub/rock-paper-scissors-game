@@ -20,7 +20,8 @@ const game = () => {
     // since the player goes first this round, the computer will go first in the next round
     goesNext = "Computer";
 
-    alert(`Round ${roundCount} starts:\nYou go first`);
+    alert(`Rock-Paper-Scissors Round ${roundCount} starts 🚀:
+      \nYou go first 🙍‍♂️`);
 
     // get the player's choice first since the player goes first this round
     const playerChoice = playerPlay();
@@ -32,7 +33,7 @@ const game = () => {
     const roundResult = playRound(computerChoice, playerChoice);
 
     // handle the result of the round and update the game state accordingly
-    afterRound(roundResult, goesNext);
+    afterRound(roundResult, computerChoice, playerChoice, goesNext);
   }
 
   // if the computer goes first in the current round
@@ -40,7 +41,8 @@ const game = () => {
     // since the computer goes first this round, the player will go first in the next round
     goesNext = "Player";
 
-    alert(`Round ${roundCount} starts:\nComputer goes first`);
+    alert(`Rock-Paper-Scissors Round ${roundCount} starts 🚀:
+      \nComputer goes first 🤖`);
 
     // get the computer's choice since the computer goes first this round
     const computerChoice = computerPlay(gameObject.options);
@@ -52,7 +54,7 @@ const game = () => {
     const roundResult = playRound(computerChoice, playerChoice);
 
     // handle the result of the round and update the game state accordingly
-    afterRound(roundResult, goesNext);
+    afterRound(roundResult, computerChoice, playerChoice, goesNext);
   }
 };
 

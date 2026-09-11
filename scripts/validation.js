@@ -6,6 +6,7 @@ const sanitizeChoice = (choice) => {
   if (choice === "") {
     return "";
   }
+
   return choice.trim().toLowerCase();
 };
 
@@ -20,14 +21,16 @@ const validateChoice = (choice) => {
 
   //  if the choice is empty string - meaning player clicks ok with empty input or it is the first attempt
   if (playerChoice === "") {
-    const input = prompt("please enter an option");
+    const input = prompt(
+      "😊 Please enter your choice (rock, paper, or scissors):",
+    );
     playerChoice = validateChoice(input);
   }
 
   //   check if player choice is allowed
   if (!gameObject.options.includes(playerChoice)) {
     const input = prompt(
-      "please enter choices between rock paper and scissors",
+      "Oops! 😊 Invalid choice. Please enter choices between (rock paper and scissors)",
     );
     playerChoice = validateChoice(input);
   }

@@ -10,7 +10,7 @@ const computerWins = () => {
 
 const playRound = (computerSelection, playerSelection) => {
   if (computerSelection === playerSelection) {
-    return "tie";
+    return "Draw";
   }
 
   if (computerSelection === "rock") {
@@ -43,9 +43,12 @@ const playRound = (computerSelection, playerSelection) => {
   }
 };
 
-const afterRound = (roundResult, goesNext) => {
+const afterRound = (roundResult, computerChoice, playerChoice, goesNext) => {
   const roundsPlayed = gameObject.roundCount;
-  alert(`Round ${roundsPlayed} Ends: ${roundResult}\n ${getScoreReport()}`);
+  alert(`Round ${roundsPlayed} Ends 🚩:
+    \nComputer chose 🤖: ${computerChoice} <|> You chose 🙍‍♂️: ${playerChoice}
+    \nResult: ${roundResult}
+    \n${getScoreReport()}`);
 
   if (!winnerAvailable()) {
     gameObject.goesFirst = goesNext;
@@ -53,7 +56,8 @@ const afterRound = (roundResult, goesNext) => {
   } else {
     const gameWinner = determineGameWinner();
     alert(
-      `Game Over: ${gameWinner} after ${roundsPlayed} round${roundsPlayed > 1 ? "s" : ""}\n ${getScoreReport()}`,
+      `Game Over 🎉🏆: ${gameWinner} after ${roundsPlayed} round${roundsPlayed > 1 ? "s" : ""}
+      \n${getScoreReport()}`,
     );
     resetGameObject();
   }
