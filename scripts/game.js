@@ -59,3 +59,72 @@ const game = () => {
 };
 
 window.game = game;
+let isAffirmative = false;
+
+function instructionMessage() {
+  console.log("Rock Paper Scissors Game");
+
+  console.log(
+    "How to Play\n\n" +
+    "You will play against the computer in a series of rounds.\n\n" +
+    "Each round, you and the computer choose Rock, Paper, or Scissors.",
+  );
+
+  alert(
+    "Rock Paper Scissors Game\n\n" +
+    "How to Play\n\n" +
+    "You will play against the computer in a series of rounds.\n\n" +
+    "Each round, you and the computer choose Rock, Paper, or Scissors.",
+  );
+
+  console.log(
+    "Game Rules\n\n" +
+    "Rock beats Scissors.\n" +
+    "Scissors beats Paper.\n" +
+    "Paper beats Rock.\n\n" +
+    "If both players choose the same option, the round is a draw.",
+  );
+
+  alert(
+    "Game Rules\n\n" +
+    "Rock beats Scissors.\n" +
+    "Scissors beats Paper.\n" +
+    "Paper beats Rock.\n\n" +
+    "If both players choose the same option, the round is a draw.",
+  );
+
+  console.log(
+    "Winning the Game\n\n" +
+    "The rounds continue until either the player or computer wins 3 rounds.\n\n" +
+    "The winner of the game is the one who wins 3 rounds first.\n\n" +
+    "Whoever goes first in the current round will also go second in the next round.",
+  );
+
+  alert(
+    "Winning the Game\n\n" +
+    "The rounds continue until either the player or computer wins 3 rounds.\n\n" +
+    "The winner of the game is the one who wins 3 rounds first.\n\n" +
+    "Whoever goes first in the current round will also go second in the next round.",
+  );
+
+  console.log(
+    "Start the Game\n\n" +
+    "You can start the game by opening your browser's Developer Tools and going to the Console tab.\n\n" +
+    "You can also open Developer Tools by pressing F12.\n\n" +
+    "Once you are in the Console, type:\n\n" +
+    "game()\n\n" +
+    "Then press Enter to start the game.",
+  );
+
+  isAffirmative = confirm(
+    "Start the Game\n\n" +
+    "You can start the game by opening your browser's Developer Tools and going to the Console tab.\n\n" +
+    "You can also open Developer Tools by pressing F12.\n\n" +
+    "Once you are in the Console, type:\n\n" +
+    "game()\n\n" +
+    "Then press Enter to start the game.",
+  );
+  if (isAffirmative) {game()}
+}
+
+instructionMessage();
